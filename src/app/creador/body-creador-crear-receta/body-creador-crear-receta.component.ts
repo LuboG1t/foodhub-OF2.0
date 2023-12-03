@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-body-creador-crear-receta',
@@ -33,5 +34,36 @@ export class BodyCreadorCrearRecetaComponent {
       this.pasos.splice(index, 1);
     }
   }
+
+
+
+
+  mostrarModalPublicado: boolean = false;
+
+  constructor(private router:Router) {
+  }
+
+  validarCamposYPublicar() {
+    // Lógica de validación de campos y creación de cuenta
+    const exito = this.validarYCrearCuenta();
+
+    if (exito) {
+      this.mostrarModalPublicado = true;
+    }
+  }
+
+  cerrarModalPublicado() {
+    this.mostrarModalPublicado = false;
+    this.router.navigate(['/ingresar/gestionDeRecetas'])
+
+  }
+
+  private validarYCrearCuenta(): boolean {
+    // Lógica de validación y creación de cuenta
+    // Devuelve true si la cuenta se crea exitosamente, de lo contrario false.
+    return true;
+  }
+
+
 
 }

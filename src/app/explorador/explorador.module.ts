@@ -12,7 +12,6 @@ import {CreadorModule} from "../creador/creador.module";
 import {CategoriasComponent} from "../categorias/categorias.component";
 
 import {CategoriasModule} from "../categorias/categorias.module";
-
 @NgModule({
   declarations: [
     ExploradorComponent,

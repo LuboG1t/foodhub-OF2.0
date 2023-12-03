@@ -65,28 +65,18 @@
   </form>
 
   <div class="button-container">
-    <button type="button" class="orange-button" onclick="publishRecipe()">Publicar</button>
+    <button  (click)="validarCamposYPublicar()"  type="button" class="orange-button" onclick="publishRecipe()">Publicar</button>
     <p class="small-text">* Los campos obligatorios deben ser completados</p>
   </div>
 
-  <!-- Modal de Éxito -->
-  <div class="modal" id="recipeSuccessModal">
-    <div class="modal-content">
-      <span class="close" onclick="closeRecipeSuccessModal('successModal')">&times;</span>
-      <h2 class="modal-title">¡Bien!</h2>
-      <p class="modal-text">Tus cambios se han guardado exitosamente.</p>
-      <button class="orange-button" onclick="redirectToGestion()">OK</button>
+  <div *ngIf="mostrarModalPublicado" class="fixed inset-0 bg-gray-500 bg-opacity-75 flex items-center justify-center">
+    <div class="bg-white p-4 rounded-md shadow-lg">
+      <p class="text-2xl font-bold mb-4">¡Receta Publicada!</p>
+      <p>Se publicó exitosamente, podrás revisarlo en la sección de Explorar Recetas.</p>
+      <button (click)="cerrarModalPublicado()" class="orange-button bg-blue-500 text-white px-4 py-2 mt-4 rounded">Cerrar</button>
     </div>
   </div>
 
-  <!-- Modal de Advertencia -->
-  <div class="modal" id="warningModal">
-    <div class="modal-content">
-      <h2 class="modal-title">¡Espera!</h2>
-      <p class="modal-text">Todavía no has guardado tu receta. ¿Estás seguro de que quieres salir?</p>
-      <button class="white-button orange-text" onclick="closeWarningModal()">No</button>
-      <button class="orange-button" onclick="confirmNavigate()">Sí</button>
-    </div>
-  </div>
+
 
 </main>

@@ -24,8 +24,6 @@ const routes: Routes = [
 
 
 
-
-
   { path: 'iniciarSesion', component: ExploradorComponent, children: [ {path: '', component: BodyExploradorIniciarSesionComponent}]},
   { path: 'cocinaTuCuenta', component: ExploradorComponent, children: [ {path: '', component: BodyExploradorCrearCuentaComponent}]},
 

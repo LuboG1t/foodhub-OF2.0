@@ -66,13 +66,3 @@ button {
   color: gray;
 }
 
-#passwordStrength {
-  display: block;
-  font-size: 12px;
-  color: #ff5555;
-  margin-bottom: 5px;
-}
-
-#passwordStrength.valid {
-  color: #55ff55;
-}
