@@ -7,6 +7,10 @@ import { Component } from '@angular/core';
 })
 export class CardBodyComponent {
 
+  goBack() {
+    window.history.back();
+  }
+
   nombre: String="soy el nombre";
   descipciom: String="soy la descipcion";
   img: String="soy la imange";

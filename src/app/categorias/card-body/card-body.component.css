@@ -134,3 +134,13 @@ ul, ol {
 .paso-content {
   text-align: justify;
 }
+
+
+.back-button img {
+  position: absolute;
+  left: 70px;
+  margin-top: 50px;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+}
