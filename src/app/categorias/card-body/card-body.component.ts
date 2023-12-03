@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class CardBodyComponent {
 
+  nombre: String="soy el nombre";
+  descipciom: String="soy la descipcion";
+  img: String="soy la imange";
+
 }

@@ -7,9 +7,8 @@ import { BodyCreadorExplorarRecetasComponent } from './body-creador-explorar-rec
 import { BodyCreadorGestionRecetasComponent } from './body-creador-gestion-recetas/body-creador-gestion-recetas.component';
 import { BodyCreadorMiPerfilComponent } from './body-creador-mi-perfil/body-creador-mi-perfil.component';
 import { BodyCreadorCrearRecetaComponent } from './body-creador-crear-receta/body-creador-crear-receta.component';
-import {HeaderExploradorComponent} from "../explorador/header-explorador/header-explorador.component";
-import {CategoriasModule} from "../categorias/categorias.module";
 import {FormsModule} from "@angular/forms";
+
 
 
 @NgModule({

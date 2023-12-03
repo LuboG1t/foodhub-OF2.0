@@ -9,32 +9,11 @@
     <div class="column-right">
 
       <!-- CARD 1 -->
-      <div class="card">
-        <img src="./assets/images/receta1.jpg" alt="Imagen de la tarjeta">
+      <div *ngFor="let recipe of recipes" class="card">
+        <img [src]="recipe.image" alt="Imagen de la tarjeta">
         <div class="card-content">
-          <h3>Deficit 1</h3>
-          <p>Aprende a preparar este rico desayuno con tres simples ingredientes.
-            Con estos sencillos pasos podrás disfrutar de este rico y nutritivo platillo</p>
-        </div>
-      </div>
-
-      <!-- CARD 1 -->
-      <div class="card">
-        <img src="./assets/images/receta1.jpg" alt="Imagen de la tarjeta">
-        <div class="card-content">
-          <h3>Deficit 2</h3>
-          <p>Aprende a preparar este rico desayuno con tres simples ingredientes.
-            Con estos sencillos pasos podrás disfrutar de este rico y nutritivo platillo</p>
-        </div>
-      </div>
-
-      <!-- CARD 1 -->
-      <div class="card">
-        <img src="./assets/images/receta1.jpg" alt="Imagen de la tarjeta">
-        <div class="card-content">
-          <h3>Deficit 3</h3>
-          <p>Aprende a preparar este rico desayuno con tres simples ingredientes.
-            Con estos sencillos pasos podrás disfrutar de este rico y nutritivo platillo</p>
+          <h3>{{ recipe.title }}</h3>
+          <p>{{ recipe.description }}</p>
         </div>
       </div>
 

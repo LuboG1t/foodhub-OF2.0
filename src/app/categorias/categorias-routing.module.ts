@@ -10,6 +10,7 @@ import {SuperavitComponent} from "./superavit/superavit.component";
 import {DeficitComponent} from "./deficit/deficit.component";
 import {CreadorComponent} from "../creador/creador.component";
 import {ExploradorComponent} from "../explorador/explorador.component";
+import {CardBodyComponent} from "./card-body/card-body.component";
 
 const routes: Routes = [
 
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'postres', component: CategoriasComponent, children: [{path:"", component: PostresComponent}]},
   { path: 'superavit', component: CategoriasComponent, children: [{path:"", component: SuperavitComponent}]},
   { path: 'deficit', component: CategoriasComponent, children: [{path:"", component: DeficitComponent}]},
+  { path: 'cardBody', component: CategoriasComponent, children: [{path:"", component: CardBodyComponent}]},
 
 ];
 

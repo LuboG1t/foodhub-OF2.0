@@ -22,6 +22,7 @@ public tipo: string ="";
     this.tipo="creador"
     this.sharedService.setTipo(this.tipo);
     console.log("tipo creador: ",this.tipo)
+    this.router.navigate(['/ingresar']);
   }
 }
 

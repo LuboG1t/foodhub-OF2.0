@@ -14,6 +14,7 @@ import { CardBodyComponent } from './card-body/card-body.component';
 import {CreadorModule} from "../creador/creador.module";
 import {HeaderExploradorComponent} from "../explorador/header-explorador/header-explorador.component";
 import {HeaderCreadorComponent} from "../creador/header-creador/header-creador.component";
+import {NgxPaginationModule} from "ngx-pagination";
 
 @NgModule({
   declarations: [
@@ -28,13 +29,14 @@ import {HeaderCreadorComponent} from "../creador/header-creador/header-creador.c
     CardBodyComponent,
     SidebarComponent
   ],
-  imports: [
-    CommonModule,
-    CategoriasRoutingModule,
-    HeaderExploradorComponent,
-    CreadorModule,
+    imports: [
+        CommonModule,
+        CategoriasRoutingModule,
+        HeaderExploradorComponent,
+        CreadorModule,
+        NgxPaginationModule,
 
-  ],
+    ],
   exports: [
     CategoriasComponent,
     InicioComponent,
