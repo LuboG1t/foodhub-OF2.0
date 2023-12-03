@@ -6,14 +6,14 @@
       <h2>Ingresa a la Gran Comunidad <br> Saludable de FoodHub</h2>
       <p>Ingresa tus datos registrados</p>
 
-      <form>
-        <label for="correoCodigo">Correo Electrónico o Código de Colegiado: *</label>
-        <input type="text" placeholder="abc@example.com/012345" id="correoCodigo" name="correoCodigo" required>
+      <form (ngSubmit)="iniciarSesion()">
+        <label for="identificador">Correo Electrónico o Código de Colegiado: *</label>
+        <input type="text" placeholder="abc@example.com/012345" id="identificador" name="identificador" required [(ngModel)]="authData.identificador">
 
-        <label for="contrasena">Contraseña: *</label>
-        <input type="password" placeholder="*********" id="contrasena" name="contrasena" required>
+        <label for="contrasenia">Contraseña: *</label>
+        <input type="password" placeholder="*********" id="contrasenia" name="contrasenia" required [(ngModel)]="authData.contrasenia">
 
-        <button (click)="llevarCreador()" routerLink="/ingresar" type="submit">Ingresar</button>
+        <button (click)="iniciarSesion()" type="submit">Ingresar</button>
 
         <p class="obligatorio-texto">* Todos los campos son obligatorios y deben ser llenados.</p>
 

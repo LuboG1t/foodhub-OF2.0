@@ -7,24 +7,25 @@
       <h3>Conviértete en Creador</h3>
       <p>Un creado es un nutricionista, para crear una cuenta <br> debes validar tu código de colegiado.</p>
 
-      <form>
+      <form (ngSubmit)="registrarCreador()">
         <label for="nombre">Nombre: *</label>
-        <input type="text" placeholder="Ingrese Nombre *" id="nombreInput" required>
+        <input type="text" placeholder="Ingrese Nombre *" id="nombre" name="nombre" required [(ngModel)]="creadorData.nombre" >
 
         <label for="apellidoPaterno">Apellido Paterno: *</label>
-        <input type="text" placeholder="Ingrese Apellido Paterno *" id="apellidoPaternoInput" required>
+        <input type="text" placeholder="Ingrese Apellido Paterno *" id="apellidoPaterno" name="apellidoPaterno" required [(ngModel)]="creadorData.apellidoPaterno" >
 
         <label for="apellidoMaterno">Apellido Materno: *</label>
-        <input type="text" placeholder="Ingrese Apellido Materno *" id="apellidoMaternoInput" required>
+        <input type="text" placeholder="Ingrese Apellido Materno *" id="apellidoMaterno" name="apellidoMaterno" required [(ngModel)]="creadorData.apellidoMaterno" >
 
-        <label for="correo">Correo Electrónico: *</label>
-        <input type="email" placeholder="Ingrese Correo Electrónico *" id="emailInput" required>
+        <label for="correoElectronico">Correo Electrónico: *</label>
+        <input type="email" placeholder="Ingrese Correo Electrónico *" id="correoElectronico" name="correoElectronico" required [(ngModel)]="creadorData.correoElectronico" >
 
-        <label for="contrasena">Contraseña: *</label>
-        <input type="password" placeholder="********" id="contrasena" name="contrasena" required>
+        <label for="contrasenia">Contraseña: *</label>
+        <input type="password" placeholder="********" id="contrasenia" name="contrasenia" required [(ngModel)]="creadorData.contrasenia" >
 
-        <label for="codigoColegiado">Código de Colegiado: *</label>
-        <input type="number" placeholder="012345" maxlength="10" id="codigoColegiadoInput" required>
+        <label for="codigoColegiatura">Código de Colegiado: *</label>
+        <input type="number" placeholder="012345" maxlength="10" id="codigoColegiatura" name="codigoColegiatura"  required [(ngModel)]="creadorData.codigoColegiatura" >
+
         <button type="submit">Crear cuenta</button>
 
         <p class="obligatorio-texto">* Todos los campos son obligatorios y deben ser llenados.</p>

@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { HeaderExploradorComponent } from './explorador/header-explorador/header-explorador.component';
 import { FooterComponent } from './footer/footer.component';
 import {HeaderCreadorComponent} from "./creador/header-creador/header-creador.component";
+import { HttpClientModule } from "@angular/common/http";
 
 
 @NgModule({
@@ -16,7 +17,7 @@ import {HeaderCreadorComponent} from "./creador/header-creador/header-creador.co
     BrowserModule,
     AppRoutingModule,
     HeaderExploradorComponent,
-
+    HttpClientModule
   ],
   providers: [],
   exports: [

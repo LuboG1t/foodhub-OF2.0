@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import {Categoria} from "../../models/categoria";
+import {Ingrediente, Instruccion, RecetaRequest} from "../../models/RecetaRequest";
+import {RecetaService} from "../../services/integration/receta.service";
 
 @Component({
   selector: 'app-body-creador-crear-receta',
@@ -7,8 +10,22 @@ import { Component } from '@angular/core';
 })
 export class BodyCreadorCrearRecetaComponent {
 
+  // titulo: string = '';
+  // descripcion: string = '';
+  // tiempoCoccion: number = 0;
+  // porciones: number = 0;
+  // calorias: number = 0;
+  // imagen: string = '';
+  // categoria: Categoria | null = null;
+  // ingredientes: Ingrediente[] = [];
+  // instrucciones: Instruccion[] = [];
+
+
   ingredientes: { id: number, nombre: string }[] = [{ id: 1, nombre: '' }];
   pasos: { id: number, descripcion: string }[] = [{ id: 1, descripcion: '' }];
+
+  constructor(private recetaService: RecetaService) {
+  }
 
   agregarIngrediente() {
     const nuevoId = this.ingredientes.length + 1;

@@ -12,6 +12,7 @@ import {CreadorModule} from "../creador/creador.module";
 import {CategoriasComponent} from "../categorias/categorias.component";
 
 import {CategoriasModule} from "../categorias/categorias.module";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -26,13 +27,14 @@ import {CategoriasModule} from "../categorias/categorias.module";
     HeaderExploradorComponent,
 
   ],
-  imports: [
-    CommonModule,
-    ExploradorRoutingModule,
-    HeaderExploradorComponent,
-    CreadorModule,
-    CategoriasModule,
+    imports: [
+        CommonModule,
+        ExploradorRoutingModule,
+        HeaderExploradorComponent,
+        CreadorModule,
+        CategoriasModule,
+        FormsModule,
 
-  ]
+    ]
 })
 export class ExploradorModule { }

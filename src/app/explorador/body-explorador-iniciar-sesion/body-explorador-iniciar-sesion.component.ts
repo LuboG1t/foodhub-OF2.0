@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 import {SharedService} from "../../services/shared.service";
+import {AuthRequest} from "../../models/AuthRequest";
+import {AuthService} from "../../services/integration/auth.service";
 
 @Component({
   selector: 'app-body-explorador-iniciar-sesion',
@@ -9,19 +11,29 @@ import {SharedService} from "../../services/shared.service";
 })
 export class BodyExploradorIniciarSesionComponent implements OnInit{
 public tipo: string ="";
+  authData: AuthRequest = {
+    identificador: '',
+    contrasenia: ''
+  };
 
-  constructor(private router:Router, private sharedService:SharedService) {}
+  constructor(private router:Router, private sharedService:SharedService, private authService: AuthService) {}
 
   ngOnInit() {
     this.tipo="vacio"
     this.sharedService.setTipo(this.tipo);
-    console.log("tipo vacio: ",this.tipo)
   }
 
-  llevarCreador(){
-    this.tipo="creador"
-    this.sharedService.setTipo(this.tipo);
-    console.log("tipo creador: ",this.tipo)
+
+  iniciarSesion(): void {
+
+    this.authService.iniciarSesion(this.authData).subscribe(response => {
+      this.tipo="creador"
+      this.sharedService.setTipo(this.tipo);
+      console.log('Respuesta del servidor:', response);
+      this.router.navigate(['/ingresar']);
+    }, error => {
+        console.error('Error al iniciar sesión:', error);
+      });
   }
 }
 

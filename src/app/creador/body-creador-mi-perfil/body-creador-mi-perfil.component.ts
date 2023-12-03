@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {CreadorService} from "../../services/integration/creador.service";
 
 @Component({
   selector: 'app-body-creador-mi-perfil',
@@ -8,6 +9,9 @@ import { Component } from '@angular/core';
 export class BodyCreadorMiPerfilComponent {
 
   public profileImage: string | ArrayBuffer | null = './assets/images/default-profile-image.jpg';
+
+  constructor(private creadorService: CreadorService) {
+  }
 
   onFileSelected(event: any): void {
     const file = event.target.files[0];
